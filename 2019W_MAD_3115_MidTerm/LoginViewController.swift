@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
         }
         if let passw=userDefault.string(forKey: "password"){
             txtPass.text=passw
+            swRememberMe.isOn = true
         }
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,9 +41,14 @@ class LoginViewController: UIViewController {
                 userDefault.set(userName, forKey: "userName")
                 userDefault.set(pass, forKey: "password")
             }
+            if (swRememberMe.isOn==false){
+                userDefault.removeObject(forKey: "userName")
+                userDefault.removeObject(forKey: "password")
+            }
             let sb=UIStoryboard(name: "Main", bundle: nil)
             let studVC=sb.instantiateViewController(withIdentifier: "StudVC") as! StudentEntryViewController
-            navigationController?.pushViewController(studVC, animated: true)
+            self.present(studVC, animated: true)
+            //navigationController?.pushViewController(studVC, animated: true)
         }
         else{
             print("Alert")

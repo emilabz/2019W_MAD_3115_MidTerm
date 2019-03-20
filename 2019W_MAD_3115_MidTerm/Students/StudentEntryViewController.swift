@@ -10,13 +10,29 @@ import UIKit
 
 class StudentEntryViewController: UIViewController {
 
+    @IBOutlet weak var txtStudID: UITextField!
+    @IBOutlet weak var txtStudName: UITextField!
+    @IBOutlet weak var txtGender: UITextField!
+    @IBOutlet weak var PickerVwCourse: UIPickerView!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtBirthDate: UITextField!
+    
+    @IBOutlet weak var txtMarks1: UITextField!
+    @IBOutlet weak var txtMarks2: UITextField!
+    @IBOutlet weak var txtMarks3: UITextField!
+    @IBOutlet weak var txtMarks4: UITextField!
+    @IBOutlet weak var txtMarks5: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnSubmitAction(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
