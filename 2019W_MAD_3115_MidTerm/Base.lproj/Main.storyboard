@@ -288,7 +288,7 @@
         <!--Student Result View Controller-->
         <scene sceneID="UaR-nO-cda">
             <objects>
-                <viewController id="Opa-rH-nIV" customClass="StudentResultViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudResVC" id="Opa-rH-nIV" customClass="StudentResultViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qAf-oU-Kxd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

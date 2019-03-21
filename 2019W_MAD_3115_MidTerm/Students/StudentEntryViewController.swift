@@ -65,7 +65,7 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate, UIPicke
         subMarks[2]=Double(txtMarks3.text!)!
         subMarks[3]=Double(txtMarks4.text!)!
         subMarks[4]=Double(txtMarks5.text!)!
-        var stud=Student(studentID: txtStudID.text!, studentName: txtStudName.text!, gender: txtGender.text!, courseName: courseName, studentEmail: txtEmail.text!, studentBirthDate: txtBirthDate.text!, marks: subMarks)
+        let stud=Student(studentID: txtStudID.text!, studentName: txtStudName.text!, gender: txtGender.text!, courseName: courseName, studentEmail: txtEmail.text!, studentBirthDate: txtBirthDate.text!, marks: subMarks)
         stud.calculate()
         let sb=UIStoryboard(name: "Main", bundle: nil)
         let studresVC=sb.instantiateViewController(withIdentifier: "StudResVC") as! StudentResultViewController

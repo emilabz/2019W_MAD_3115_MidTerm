@@ -31,10 +31,35 @@ class StudentResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadValues()
 
         // Do any additional setup after loading the view.
     }
-    
+    func loadValues(){
+        lblStudentID.text=studres.studentID
+        lblStudentName.text=studres.studentName
+        lblGender.text=studres.gender
+        lblCourseName.text=studres.courseName
+        lblEmail.text=studres.studentEmail
+        lblBirthDate.text=studres.studentBirthDate
+        
+        lblMark1.text=String(studres.marks[0])
+        lblMark2.text=String(studres.marks[1])
+        lblMark3.text=String(studres.marks[2])
+        lblMark4.text=String(studres.marks[3])
+        lblMark5.text=String(studres.marks[4])
+        
+        lblTotalMarks.text=String(studres.totalMarks)
+        lblPercentage.text="\(studres.percentage)%"
+        lblGrade.text=studres.grade
+        if(studres.percentage == 0.0){
+            lblGrade.textColor=UIColor(red: 100.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        }
+        else{
+            lblGrade.textColor=UIColor(red: 0.0, green: 100.0, blue: 0.0, alpha: 1.0)
+        }
+        
+    }
 
     /*
     // MARK: - Navigation
