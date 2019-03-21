@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Student Entry" id="1P5-4h-FHN">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="7HU-Jg-5FT"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="7HU-Jg-5FT">
+                                            <connections>
+                                                <action selector="LogoutAction:" destination="CXC-6Q-iZe" id="Xze-7A-VRE"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -279,11 +283,12 @@
                         <outlet property="txtMarks5" destination="OqU-dx-CSd" id="ShD-Ob-QuG"/>
                         <outlet property="txtStudID" destination="Rb9-Fz-poZ" id="8Zl-JR-IYI"/>
                         <outlet property="txtStudName" destination="WkD-jd-vXu" id="uQQ-yT-Ilz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showLoginSegue" id="iFO-7s-6fR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCj-pX-UsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895.6521739130437" y="26.785714285714285"/>
+            <point key="canvasLocation" x="1867" y="26"/>
         </scene>
         <!--Student Result View Controller-->
         <scene sceneID="UaR-nO-cda">
@@ -298,7 +303,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Student Results" id="ruy-tM-vtC">
-                                        <barButtonItem key="rightBarButtonItem" title="Back" id="28d-Z0-lL5"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Back" id="28d-Z0-lL5">
+                                            <connections>
+                                                <segue destination="CXC-6Q-iZe" kind="show" id="vNk-EV-WjU"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

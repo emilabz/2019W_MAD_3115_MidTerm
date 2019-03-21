@@ -52,6 +52,7 @@ class Student{
         }
         if count >= 2{
             percentage=0.0
+            grade="FAIL"
         }
         else{
             percentage = (totalMarks/500)*100

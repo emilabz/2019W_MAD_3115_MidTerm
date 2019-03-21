@@ -73,6 +73,13 @@ class StudentEntryViewController: UIViewController,UIPickerViewDelegate, UIPicke
         self.present(studresVC, animated: true)
     }
     
+    
+    @IBAction func LogoutAction(_ sender: UIBarButtonItem) {
+        let userDefault=UserDefaults.standard
+        userDefault.removeObject(forKey: "userName")
+        userDefault.removeObject(forKey: "password")
+        self.performSegue(withIdentifier: "showLoginSegue", sender: sender)
+    }
     /*
     // MARK: - Navigation
 
